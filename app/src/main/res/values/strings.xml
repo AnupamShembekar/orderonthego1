@@ -3,13 +3,16 @@
     <string name="action_settings">Settings</string>
     <string name="additem">Add New Item</string>
 
-    <string name="Catagoty_prompt">Choose a Catagory</string>
+    <string name="Catagoty_prompt">Choose a Category</string>
     <string name="SubmitButtonadditem">Submit</string>
     <string name="additemtv">Add Item</string>
     <string name="admindeleteitem">Delet</string>
     <string name="adminDelet">Delet Item</string>
     <string name="edititemprice">Edit Price</string>
     <string name="savenewproce">Save</string>
+    <string name="welcome1">Welcome</string>
+    <string name="check_total">Check Total</string>
+    <string name="order">Order</string>
 
     <string-array name="Categories">
         <item>Starter</item>
