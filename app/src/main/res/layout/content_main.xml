@@ -17,14 +17,14 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="horizontal"
-        android:background="#d4cec2">
+        android:background="#FFFFFF">
 
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/logo"
-            android:src="@drawable/logomain"/>
+            android:src="@drawable/mainappicon"/>
 
 
 
