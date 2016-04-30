@@ -29,29 +29,27 @@
             android:id="@+id/textView"
             android:layout_centerHorizontal="true" />
 
-    <RelativeLayout
-        android:id="@+id/InnerRelativeLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textView"
-        android:layout_above="@+id/InnerRelativeLayout">
+         <RelativeLayout
+            android:id="@+id/InnerRelativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView"
+            android:layout_above="@+id/InnerRelativeLayout">
 
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/scrollView"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true">
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true">
 
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                />
+                android:id="@+id/lv"/>
 
         </ScrollView>
-    </RelativeLayout>
+   </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/InnerRelativeLayout"
