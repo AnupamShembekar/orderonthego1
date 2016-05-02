@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
         md.ninsertDB();
         md.dinsertDB();
         md.oinsertDB();
+        md.AadminDB();
 
     }
 

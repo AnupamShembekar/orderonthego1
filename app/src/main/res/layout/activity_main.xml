@@ -20,16 +20,9 @@
             android:background="#488462"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
-
-
         </android.support.v7.widget.Toolbar>
 
-
-
     </android.support.design.widget.AppBarLayout>
-
     <include layout="@layout/content_main" />
-
-
 
 </android.support.design.widget.CoordinatorLayout>
