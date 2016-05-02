@@ -6,7 +6,7 @@
     <string name="Catagoty_prompt">Choose a Category</string>
     <string name="SubmitButtonadditem">Submit</string>
     <string name="additemtv">Add Item</string>
-    <string name="admindeleteitem">Delet</string>
+    <string name="admindeleteitem">Delete</string>
     <string name="adminDelet">Delet Item</string>
     <string name="edititemprice">Edit Price</string>
     <string name="savenewproce">Save</string>
