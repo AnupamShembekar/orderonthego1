@@ -19,17 +19,88 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#488462"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
-
-
-
         </android.support.v7.widget.Toolbar>
-
-
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#d4cec2"
+        android:id="@+id/linearlayadminedit4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearlayadminedit2">
+            <include layout="@layout/toolbar" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
 
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/login"
+                android:id="@+id/textViewLogin"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/mobile_number"
+                android:id="@+id/textViewmob"
+                android:layout_gravity="center_horizontal" />
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50sp"
+                android:layout_marginRight="50sp"
+                android:layout_marginTop="55sp"
+                android:id="@+id/et"
+                android:hint="@string/enter_only"/>
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Enter"
+                android:layout_marginTop="55sp"
+                android:layout_gravity="center"
+                />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
