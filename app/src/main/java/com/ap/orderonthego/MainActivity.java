@@ -19,14 +19,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       /*md=new Main_courseDB(this);
+        md=new Main_courseDB(this);
 //     	md.onCreate(db);
         md.sinsertDB();
         md.nsinsertDB();
         md.vinsertDB();
         md.ninsertDB();
         md.dinsertDB();
-        md.oinsertDB();*/
+        md.oinsertDB();
+        md.AadminDB();
 
     }
 

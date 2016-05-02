@@ -13,6 +13,10 @@
     <string name="welcome1">Welcome</string>
     <string name="check_total">Check Total</string>
     <string name="order">Order</string>
+    <string name="login">Login</string>
+    <string name="mobile_number">Enter Mobile Number</string>
+    <string name="Enter">Enter</string>
+    <string name="enter_only">Enter only 10 digit Mobile number</string>
 
     <string-array name="Categories">
         <item>Starter</item>

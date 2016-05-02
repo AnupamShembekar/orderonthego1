@@ -47,6 +47,12 @@ public class Main_courseDB extends SQLiteOpenHelper {
     public static String OPRICE="o_price";
     public static String OCODE="o_serial";
 
+    //Admin Table
+
+    public static String ATABLE_NAME="Admin";
+    public static String ANAME="Name";
+    public static String ANUMBER="Mnumber";
+
     SQLiteDatabase sdb;
 	SQLiteOpenHelper sh;
 
@@ -86,6 +92,10 @@ public class Main_courseDB extends SQLiteOpenHelper {
         //OTHER TABLE
 		db.execSQL("create table " + OTABLE_NAME + " (o_serial  INTEGER PRIMARY KEY AUTOINCREMENT,o_name TEXT,o_price INTEGER)");
 		Log.d("database operations", "other_table created");
+
+        //Admin Table
+        db.execSQL("create table " + ATABLE_NAME + " ("+ANUMBER+" INTEGER ,"+ANAME+" TEXT)");
+        Log.d("database operations", "Admin_Table created");
 
 	}
 
@@ -276,6 +286,15 @@ public class Main_courseDB extends SQLiteOpenHelper {
 
     }
 
+    public void AadminDB() {
+        sdb = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(ANAME, "Anupam Shembekar");
+        cv.put(ANUMBER, "9922269793");
+        sdb.insert(ATABLE_NAME, null, cv);
+        Log.d("ainsertion", "done");
+    }
 
     public void showDB(){
 		sdb=this.getReadableDatabase();
