@@ -1,6 +1,7 @@
 package com.ap.orderonthego;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -28,6 +29,8 @@ public class MainActivity extends Activity {
         md.dinsertDB();
         md.oinsertDB();
         md.AadminDB();
+        md.oinsertDB();
+       //startActivity(new Intent(this,AdminAddItem.class));
 
     }
 
