@@ -60,30 +60,30 @@ public class Main_courseDB extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		//db=this.getWritableDatabase();
-		//VEG-TABLE
+		// CREATE VEG-TABLE
 		db.execSQL("create table "+VTABLE_NAME+"("+VSR_NO+" integer primary key autoincrement,"+VMAIN_COURSE_NAME+" text,"+VAMOUNT+" integer)");
 		Log.d("vegtable", "created");
 		
 		
-		//NON-VEG TABLE
+		//CREATE NON-VEG TABLE
 		db.execSQL("create table nonveg_main_course(nserial integer primary key autoincrement,nmain_course_name text,nprice integer)");
 		Log.d("non-vegtable", "created");
 		
-		//DESSERT TABLE
+		//CREATE DESSERT TABLE
 		    db.execSQL("create table "+DTABLE_NAME+"("+DSR_NO+" integer primary key autoincrement,"+DESSERT_NAME+" text,"+DAMOUNT+" integer)");
 			Log.d("desserttable", "created");
 
 
-		//VEG-STARTER TABLE
+		//CREATE VEG-STARTER TABLE
 		db.execSQL("create table " + STABLE_NAME + " (s_serial  INTEGER PRIMARY KEY AUTOINCREMENT,s_name TEXT,s_price INTEGER)");
 		Log.d("database operations", "veg_startertable created");
 
 
-        //NONVEG-STARTER TABLE
+        //CREATE NONVEG-STARTER TABLE
         db.execSQL("create table " + NSTABLE_NAME + " (ns_serial  INTEGER PRIMARY KEY AUTOINCREMENT,ns_name TEXT,ns_price INTEGER)");
         Log.d("database operations", "nonveg_startertable created");
 
-        //OTHER TABLE
+        //CREATE OTHER TABLE
 		db.execSQL("create table " + OTABLE_NAME + " (o_serial  INTEGER PRIMARY KEY AUTOINCREMENT,o_name TEXT,o_price INTEGER)");
 		Log.d("database operations", "other_table created");
 
@@ -94,6 +94,7 @@ public class Main_courseDB extends SQLiteOpenHelper {
 
 		
 	}
+    //INSERT INTO VEG TABLE
 	public void vinsertDB(){
 		sdb=this.getWritableDatabase();
 		ContentValues cv=new ContentValues();
@@ -122,6 +123,7 @@ public class Main_courseDB extends SQLiteOpenHelper {
 		cv.put(VAMOUNT, 110);
 
 	}
+    //INSERT INTO NON-VEG TABLE
 	public void ninsertDB(){
 		sdb=this.getWritableDatabase();
 		ContentValues cv=new ContentValues();
@@ -151,7 +153,8 @@ public class Main_courseDB extends SQLiteOpenHelper {
 
 		
 	}
-	
+
+    //INSERT INTO DESSERT TABLE
 	public void dinsertDB(){
 		
 		sdb=this.getWritableDatabase();
@@ -183,16 +186,17 @@ public class Main_courseDB extends SQLiteOpenHelper {
 		
 	}
 
-    public void sinsertDB(){
+    //INSERT INTO VEG-STARTER TABLE
+    public void sinsertDB(String startername,String starterprice){
         sdb=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
 
-        cv.put(SNAME, "Masala papad");
-        cv.put(SPRICE, 20);
+        cv.put(SNAME, startername);
+        cv.put(SPRICE, starterprice);
         sdb.insert(STABLE_NAME, null, cv);
         Log.d("sinsertion", "done");
 
-        cv.put(SNAME, "Paneer Pakoda");
+       /* cv.put(SNAME, "Paneer Pakoda");
         cv.put(SPRICE, 50);
         sdb.insert(STABLE_NAME, null, cv);
         Log.d("sinsertion", "done");
@@ -210,11 +214,11 @@ public class Main_courseDB extends SQLiteOpenHelper {
         cv.put(SNAME, "Veg-sandwich");
         cv.put(SPRICE, 20);
         sdb.insert(STABLE_NAME, null, cv);
-        Log.d("sinsertion", "done");
+        Log.d("sinsertion", "done");*/
 
     }
 
-
+        //NON-VEG STARTER TABLE
     public void nsinsertDB(){
         sdb=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
@@ -245,6 +249,8 @@ public class Main_courseDB extends SQLiteOpenHelper {
         Log.d("Nsinsertion", "done");
 
     }
+
+    //INSERT INTO OTHERS TABLE
     public void oinsertDB(){
         sdb=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
@@ -276,7 +282,7 @@ public class Main_courseDB extends SQLiteOpenHelper {
 
     }
 
-
+    //SHOW TABLES
     public void showDB(){
 		sdb=this.getReadableDatabase();
 		Cursor c=sdb.rawQuery("Select * from vmain_course",new String[]{"vmain_course_name","vprice"});
