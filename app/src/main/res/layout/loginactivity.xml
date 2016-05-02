@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#d4cec2"
+    android:id="@+id/linearlayadminedit4"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,51 +15,59 @@
         android:id="@+id/linearlayadminedit2">
         <include layout="@layout/toolbar" />
 
-    </LinearLayout>
 
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/adminDelet"
-            android:id="@+id/textView"
+            android:text="@string/login"
+            android:id="@+id/textViewLogin"
             android:layout_gravity="center_horizontal" />
 
-        <Spinner
-            android:id="@+id/spinner11"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15sp"
-            android:entries="@array/Categories"
-            android:prompt="@string/Catagoty_prompt" />
+            android:layout_marginTop="55sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mobile_number"
+            android:id="@+id/textViewmob"
+            android:layout_gravity="center_horizontal" />
 
-        <Spinner
-            android:id="@+id/spinner12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15sp"
-            android:entries="@array/Categories"
-            android:prompt="@string/Catagoty_prompt" />
 
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="50sp"
+          android:layout_marginRight="50sp"
+          android:layout_marginTop="55sp"
+          android:hint="@string/enter_only"/>
 
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/admindeleteitem"
+            android:text="@string/Enter"
+            android:layout_marginTop="55sp"
             android:layout_gravity="center"
             />
 
 
 
     </LinearLayout>
+
 
 </LinearLayout>
