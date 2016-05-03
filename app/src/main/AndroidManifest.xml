@@ -25,7 +25,7 @@
             android:name=".MainActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity android:name=".AdminAddItem" />
+        <activity android:name=".AdminPage" />
     </application>
 
 </manifest>
