@@ -303,5 +303,9 @@ public class Main_courseDB extends SQLiteOpenHelper {
 		c.getString(1);
 
 	}
+    public int compare(String num)
+    {
+        return 0;
+    }
 
 }
