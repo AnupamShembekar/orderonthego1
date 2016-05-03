@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
         md.AadminDB();
 =======
         md.oinsertDB();*/
->>>>>>> Temporary merge branch 2
+
 
     }
 
