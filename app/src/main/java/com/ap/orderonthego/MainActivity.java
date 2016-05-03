@@ -21,23 +21,27 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button btn;
     String num;
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         et = (EditText)findViewById(R.id.et);
         btn = (Button)findViewById(R.id.btnSubmit);
         btn.setOnClickListener(this);
 
-       /* md=new Main_courseDB(this);
+       /*md=new Main_courseDB(this);
 //     	md.onCreate(db);
         md.sinsertDB();
         md.nsinsertDB();
         md.vinsertDB();
         md.ninsertDB();
         md.dinsertDB();
+<<<<<<< Temporary merge branch 1
         md.oinsertDB();
         md.AadminDB();
+=======
+        md.oinsertDB();*/
+
+
         md.oinsertDB();
        //startActivity(new Intent(this,AdminAddItem.class));*/
     }

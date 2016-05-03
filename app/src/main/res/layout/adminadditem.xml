@@ -22,10 +22,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-
+        android:layout_height="match_parent"
+        android:id="@+id/ilayout">
 
 
         <TextView
@@ -44,14 +42,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
             android:entries="@array/Categories"
-            android:prompt="@string/Catagoty_prompt" />
+            android:prompt="@string/Catagoty_prompt"
+            />
 
         <Spinner
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/Numberofitem"
-            android:prompt="@string/Catagoty_prompt" />
+            android:prompt="@string/Catagoty_prompt"
+            />
 
 
         <Button
@@ -61,6 +61,13 @@
             android:text="@string/SubmitButtonadditem"
             android:layout_gravity="center"
             />
+        <LinearLayout
+            android:id="@+id/edlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            ></LinearLayout>
+
 
 
 
