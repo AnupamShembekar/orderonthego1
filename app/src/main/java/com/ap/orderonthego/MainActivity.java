@@ -15,8 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-   /* Main_courseDB md;
-    SQLiteDatabase db;*/
+
     EditText et;
     Button btn;
     String num;
@@ -28,17 +27,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn = (Button)findViewById(R.id.btnSubmit);
         btn.setOnClickListener(this);
 
-       /*md=new Main_courseDB(this);
-       	md.onCreate(db);
-        md.sinsertDB();
-        md.nsinsertDB();
-        md.vinsertDB();
-        md.ninsertDB();
-        md.dinsertDB();
 
-        md.oinsertDB();
-        md.AadminDB();
-*/
     }
 
 
