@@ -132,16 +132,16 @@ public class Main_courseDB extends SQLiteOpenHelper {
 		cv.put(VAMOUNT, 110);*/
 
 	}
-	public void ninsertDB(){
+	public void ninsertDB(String nonvegmain,String nonvegmainprice){
 		sdb=this.getWritableDatabase();
 		ContentValues cv=new ContentValues();
 
-		cv.put(NMAIN_COURSE_NAME, "Chicken 65");
-		cv.put(NAMOUNT, 70);
+		cv.put(NMAIN_COURSE_NAME, nonvegmain);
+		cv.put(NAMOUNT, nonvegmainprice);
         sdb.insert(NTABLE_NAME, null, cv);
         Log.d("Ninsertion", "done");
 
-		cv.put(NMAIN_COURSE_NAME, "Mutton Biryani");
+		/*cv.put(NMAIN_COURSE_NAME, "Mutton Biryani");
 		cv.put(NAMOUNT, 50);
         sdb.insert(NTABLE_NAME, null, cv);
         Log.d("Ninsertion", "done");
@@ -157,7 +157,7 @@ public class Main_courseDB extends SQLiteOpenHelper {
         Log.d("Ninsertion", "done");
 
 		cv.put(NMAIN_COURSE_NAME, "Egg Curry");
-		cv.put(NAMOUNT, 110);
+		cv.put(NAMOUNT, 110);*/
 
 		
 	}
@@ -225,16 +225,16 @@ public class Main_courseDB extends SQLiteOpenHelper {
     }
 
 
-    public void nsinsertDB(){
+    public void nsinsertDB(String nonvegstarter,String nonvegstarterprice){
         sdb=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
 
-        cv.put(NSNAME, "Chicken Lollypop");
-        cv.put(NSPRICE, 50);
+        cv.put(NSNAME, nonvegstarter);
+        cv.put(NSPRICE, nonvegstarterprice);
         sdb.insert(NSTABLE_NAME, null, cv);
         Log.d("Nsinsertion", "done");
 
-        cv.put(NSNAME, "Chicken Tawa");
+       /* cv.put(NSNAME, "Chicken Tawa");
         cv.put(NSPRICE, 70);
         sdb.insert(NSTABLE_NAME, null, cv);
         Log.d("Nsinsertion", "done");
@@ -252,7 +252,7 @@ public class Main_courseDB extends SQLiteOpenHelper {
         cv.put(NSNAME, "Chicken Hariyali Kabab");
         cv.put(NSPRICE, 20);
         sdb.insert(NSTABLE_NAME, null, cv);
-        Log.d("Nsinsertion", "done");
+        Log.d("Nsinsertion", "done");*/
 
     }
     public void oinsertDB(String othername,String otherprice){

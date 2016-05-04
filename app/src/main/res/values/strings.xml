@@ -17,6 +17,7 @@
     <string name="mobile_number">Enter Mobile Number</string>
     <string name="Enter">Enter</string>
     <string name="enter_only">Enter only 10 digit Mobile number</string>
+    <string name="nonvegitem">Add Non-Veg Item</string>
 
     <string-array name="Categories">
         <item>Starter</item>
