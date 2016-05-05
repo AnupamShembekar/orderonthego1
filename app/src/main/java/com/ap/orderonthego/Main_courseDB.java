@@ -303,5 +303,20 @@ public class Main_courseDB extends SQLiteOpenHelper {
 		c.getString(1);
 
 	}
+    public int rox(String num)
+    {
+            String sql = "SELECT * FROM Admin WHERE Mnumber = '" + num + "'";
+            Cursor data = sdb.rawQuery(sql, null);
+
+            if (data.moveToFirst()){
+                return 0;
+
+            }
+        else
+            {
+                return 1;
+            }
+
+    }
 
 }

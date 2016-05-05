@@ -2,6 +2,7 @@ package com.ap.orderonthego;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -20,6 +21,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     EditText et;
     Button btn;
     String num;
+    SQLiteDatabase sdb;
+    Main_courseDB dtc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,21 +32,38 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn = (Button)findViewById(R.id.btnSubmit);
         btn.setOnClickListener(this);
 
-
+        dtc= new Main_courseDB(this);
     }
 
 
     @Override
     public void onClick(View v)
     {
-        if (et!=null && et.length()==10 ) {
-            num = et.getText().toString();
-            Toast.makeText(this, "Mobile number is valid", Toast.LENGTH_SHORT).show();
+        num = et.getText().toString();
+
+        //String as = "9922269793";
+        if (et!=null && et.length()==10)
+        {
+             int i = dtc.rox(num);
+
+            if (i==0) {
+
+                Toast.makeText(this, "Mobile number is valid", Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(this, AdminPage.class);
+                startActivity(in);
+            }
+
+
+            else
+            {
+                Toast.makeText(this, "you are user", Toast.LENGTH_SHORT).show();
+            }
         }
+
         else
         {
 
-            Toast.makeText(this, "Please enter Mobile number", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "Please enter Mobile number", Toast.LENGTH_SHORT).show();
         }
 
 
