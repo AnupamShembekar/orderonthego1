@@ -13,12 +13,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-
+    String MobilePattern = "[0-9]{10}";
     EditText et;
     Button btn;
     String num;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v)
     {
-        num=et.getText().toString();
+        if (et!=null && et.length()==10 ) {
+            num = et.getText().toString();
+            Toast.makeText(this, "Mobile number is valid", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+
+            Toast.makeText(this, "Please enter Mobile number", Toast.LENGTH_SHORT).show();
+        }
 
 
 
