@@ -49,7 +49,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             if (i==0) {
 
                 Toast.makeText(this, "Mobile number is valid", Toast.LENGTH_SHORT).show();
-                Intent in = new Intent(this, AdminPage.class);
+                Intent in = new Intent(this, AdminMain.class);
                 startActivity(in);
             }
 
