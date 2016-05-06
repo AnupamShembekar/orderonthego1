@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by Akshay on 30-Apr-16.
  */
-public class AdminPage extends Activity implements AdapterView.OnItemSelectedListener,View.OnClickListener {
+public class Add_Item extends Activity implements AdapterView.OnItemSelectedListener,View.OnClickListener {
     Main_courseDB mdb;
 
     Spinner categories,quantity;
@@ -83,7 +83,7 @@ public class AdminPage extends Activity implements AdapterView.OnItemSelectedLis
         switch (v.getId()) {
             case R.id.btnSubmit:
                 if (count > 0) {
-                    startActivity(new Intent(this, AdminPage.class));
+                    startActivity(new Intent(this, Add_Item.class));
                     count--;
                 } else {
 
@@ -119,7 +119,7 @@ public class AdminPage extends Activity implements AdapterView.OnItemSelectedLis
                             items = (EditText) findViewById(100 + i);
                             price = (EditText) findViewById(200 + i);
                            mdb.sinsertDB(items.getText().toString(), price.getText().toString());
-                            startActivity(new Intent(this, AdminPage.class));
+                            startActivity(new Intent(this, Add_Item.class));
                         }
                         break;
                     case "Main_Course":
@@ -128,7 +128,7 @@ public class AdminPage extends Activity implements AdapterView.OnItemSelectedLis
                             items = (EditText) findViewById(100 + i);
                             price = (EditText) findViewById(200 + i);
                             mdb.vinsertDB(items.getText().toString(), price.getText().toString());
-                            startActivity(new Intent(this, AdminPage.class));
+                            startActivity(new Intent(this, Add_Item.class));
                         }
                         break;
                     case "Desserts":
@@ -137,7 +137,7 @@ public class AdminPage extends Activity implements AdapterView.OnItemSelectedLis
                             items = (EditText) findViewById(100 + i);
                             price = (EditText) findViewById(200 + i);
                            mdb.dinsertDB(items.getText().toString(), price.getText().toString());
-                            startActivity(new Intent(this, AdminPage.class));
+                            startActivity(new Intent(this, Add_Item.class));
                         }
                         break;
                     case "others":
@@ -146,7 +146,7 @@ public class AdminPage extends Activity implements AdapterView.OnItemSelectedLis
                             items = (EditText) findViewById(100 + i);
                             price = (EditText) findViewById(200 + i);
                             mdb.oinsertDB(items.getText().toString(), price.getText().toString());
-                            startActivity(new Intent(this, AdminPage.class));
+                            startActivity(new Intent(this, Add_Item.class));
                         }
 
 
@@ -154,7 +154,7 @@ public class AdminPage extends Activity implements AdapterView.OnItemSelectedLis
 
                     case 300 + 2:
                         Toast.makeText(this, "cancelled", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(this, AdminPage.class));
+                        startActivity(new Intent(this, Add_Item.class));
                         break;
 
 
