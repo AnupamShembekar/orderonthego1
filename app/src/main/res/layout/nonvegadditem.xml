@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -23,7 +24,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/ilayout">
+        android:id="@+id/nonvegilayout">
 
 
         <TextView
@@ -31,13 +32,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/additemtv"
+            android:text="@string/nonvegitem"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal" />
 
 
         <Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/nonvegspinner1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15sp"
@@ -46,7 +47,7 @@
             />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/nonvegspinner2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/Numberofitem"
@@ -55,20 +56,24 @@
 
 
         <Button
-            android:id="@+id/btnSubmit"
+            android:id="@+id/nonvegbtnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/SubmitButtonadditem"
             android:layout_gravity="center"
             />
-        <LinearLayout
-            android:id="@+id/edlayout"
-            android:layout_width="match_parent"
+        <ScrollView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-        </LinearLayout>
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+            <LinearLayout
+                android:id="@+id/nonvegedlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            </LinearLayout>
+        </ScrollView>
 
 
 
@@ -77,3 +82,6 @@
 
 
 </LinearLayout>
+
+
+

@@ -140,8 +140,8 @@ public class Main_courseDB extends SQLiteOpenHelper {
 		cv.put(NAMOUNT, nonvegmainprice);
         sdb.insert(NTABLE_NAME, null, cv);
         Log.d("Ninsertion", "done");
-
-		/*cv.put(NMAIN_COURSE_NAME, "Mutton Biryani");
+/*
+		cv.put(NMAIN_COURSE_NAME, "Mutton Biryani");
 		cv.put(NAMOUNT, 50);
         sdb.insert(NTABLE_NAME, null, cv);
         Log.d("Ninsertion", "done");
@@ -157,8 +157,8 @@ public class Main_courseDB extends SQLiteOpenHelper {
         Log.d("Ninsertion", "done");
 
 		cv.put(NMAIN_COURSE_NAME, "Egg Curry");
-		cv.put(NAMOUNT, 110);*/
-
+		cv.put(NAMOUNT, 110);
+    */
 		
 	}
 	
