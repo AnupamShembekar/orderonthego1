@@ -27,6 +27,7 @@
         </activity>
         <activity android:name=".Add_Item" />
         <activity android:name=".AdminMain" />
+        <activity android:name=".Delete" />
     </application>
 
 </manifest>
