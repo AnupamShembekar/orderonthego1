@@ -118,7 +118,7 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
                         for (i = 0; i < quant; i++) {
                             items = (EditText) findViewById(100 + i);
                             price = (EditText) findViewById(200 + i);
-                           mdb.sinsertDB(items.getText().toString(), price.getText().toString());
+                         //  mdb.sinsertDB(items.getText().toString(), price.getText().toString());
                             startActivity(new Intent(this, Add_Item.class));
                         }
                         break;
@@ -127,7 +127,7 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
                         for (i = 0; i < quant; i++) {
                             items = (EditText) findViewById(100 + i);
                             price = (EditText) findViewById(200 + i);
-                            mdb.vinsertDB(items.getText().toString(), price.getText().toString());
+                          //  mdb.vinsertDB(items.getText().toString(), price.getText().toString());
                             startActivity(new Intent(this, Add_Item.class));
                         }
                         break;
@@ -136,7 +136,7 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
                         for (i = 0; i < quant; i++) {
                             items = (EditText) findViewById(100 + i);
                             price = (EditText) findViewById(200 + i);
-                           mdb.dinsertDB(items.getText().toString(), price.getText().toString());
+                         //  mdb.dinsertDB(items.getText().toString(), price.getText().toString());
                             startActivity(new Intent(this, Add_Item.class));
                         }
                         break;
@@ -145,7 +145,7 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
                         for (i = 0; i < quant; i++) {
                             items = (EditText) findViewById(100 + i);
                             price = (EditText) findViewById(200 + i);
-                            mdb.oinsertDB(items.getText().toString(), price.getText().toString());
+                           // mdb.oinsertDB(items.getText().toString(), price.getText().toString());
                             startActivity(new Intent(this, Add_Item.class));
                         }
 

@@ -116,7 +116,7 @@ public class AdminNonVegAdd extends Activity implements AdapterView.OnItemSelect
                         for (i = 0; i < nonvegquant; i++) {
                             nonvegitems = (EditText) findViewById(500 + i);
                             nonvegprice = (EditText) findViewById(600 + i);
-                            mdb.nsinsertDB(nonvegitems.getText().toString(), nonvegprice.getText().toString());
+                           // mdb.nsinsertDB(nonvegitems.getText().toString(), nonvegprice.getText().toString());
                             startActivity(new Intent(this, AdminNonVegAdd.class));
                         }
                         break;
@@ -125,7 +125,7 @@ public class AdminNonVegAdd extends Activity implements AdapterView.OnItemSelect
                         for (i = 0; i < nonvegquant; i++) {
                             nonvegitems = (EditText) findViewById(500 + i);
                             nonvegprice = (EditText) findViewById(600 + i);
-                            mdb.ninsertDB(nonvegitems.getText().toString(), nonvegprice.getText().toString());
+                           // mdb.ninsertDB(nonvegitems.getText().toString(), nonvegprice.getText().toString());
                             startActivity(new Intent(this, AdminNonVegAdd.class));
                         }
                         break;

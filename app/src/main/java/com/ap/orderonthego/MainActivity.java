@@ -33,15 +33,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn.setOnClickListener(this);
 
         dtc= new Main_courseDB(this);
-//        dtc.onCreate(sdb);
-       /* sdb=dtc.getWritableDatabase();
+//       dtc.onCreate(sdb);
+        sdb=dtc.getWritableDatabase();
         dtc.sinsertDB();
         dtc.dinsertDB();
         dtc.ninsertDB();
         dtc.oinsertDB();
         dtc.vinsertDB();
          dtc.AadminDB();
-        dtc.tinsert();*/
+        dtc.tinsert();
 
 
     }

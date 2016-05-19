@@ -46,8 +46,8 @@ public class AdminMain extends Activity implements View.OnClickListener{
             case R.id.edititem2:
 
                 Toast.makeText(this, "Mobile number btn2", Toast.LENGTH_SHORT).show();
-                //Intent in = new Intent(this, Add_Item.class);
-                //startActivity(in);
+                Intent i = new Intent(this, Delete.class);
+                startActivity(i);
                 break;
 
             case R.id.edititem3:

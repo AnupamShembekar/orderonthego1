@@ -26,7 +26,7 @@ public class VegNonVegSelection extends Activity implements View.OnClickListener
         switch (v.getId())
         {
             case R.id.vegbtn:
-                startActivity(new Intent(this,AdminPage.class));
+                startActivity(new Intent(this,Add_Item.class));
                 break;
             case R.id.nonvegbtn:
                 startActivity(new Intent(this,AdminNonVegAdd.class));
