@@ -72,7 +72,7 @@ public class Main_courseDB extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-//		db=this.getWritableDatabase();
+
 		//VEG-TABLE
 		db.execSQL("create table "+VTABLE_NAME+"("+VSR_NO+" integer primary key autoincrement,"+VMAIN_COURSE_NAME+" text,"+VAMOUNT+" integer)");
 		Log.d("vegtable", "created");
@@ -116,8 +116,87 @@ public class Main_courseDB extends SQLiteOpenHelper {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS vmain_course");
+        db.execSQL("DROP TABLE IF EXISTS desserts");
+        db.execSQL("DROP TABLE IF EXISTS nonveg_main_course");
+        db.execSQL("DROP TABLE IF EXISTS Veg_Starter");
+        db.execSQL("DROP TABLE IF EXISTS NonVeg_Starter");
+        db.execSQL("DROP TABLE IF EXISTS Other");
+        db.execSQL("DROP TABLE IF EXISTS Admin");
+        db.execSQL("DROP TABLE IF EXISTS main_category");
+        onCreate(db);
 
 	}
+
+    public int cheak() {
+        String sql = "select * from vmain_course";
+        Cursor data = sdb.rawQuery(sql, null);
+
+        String sql1 = "select * from desserts";
+        Cursor data1 = sdb.rawQuery(sql1, null);
+
+        String sql2 = "select * from nonveg_main_course";
+        Cursor data2 = sdb.rawQuery(sql2, null);
+
+        String sql3 = "select * from Veg_Starter";
+        Cursor data3 = sdb.rawQuery(sql3, null);
+
+        String sql4 = "select * from NonVeg_Starter";
+        Cursor data4 = sdb.rawQuery(sql4, null);
+
+        String sql5 = "select * from Other";
+        Cursor data5 = sdb.rawQuery(sql5, null);
+
+        String sql6 = "select * from Admin";
+        Cursor data6 = sdb.rawQuery(sql6, null);
+
+        String sql7 = "select * from main_category";
+        Cursor data7 = sdb.rawQuery(sql7, null);
+
+        data.moveToFirst();
+        data1.moveToFirst();
+        data2.moveToFirst();
+        data3.moveToFirst();
+        data5.moveToFirst();
+        data6.moveToFirst();
+        data7.moveToFirst();
+
+        if (data != null)
+        {
+            data.moveToNext();
+
+            if (data1 != null) {
+                data.moveToNext();
+                if (data2 != null) {
+                    data.moveToNext();
+                    if (data3 != null) {
+                        data.moveToNext();
+                        if (data4 != null) {
+                            data.moveToNext();
+                            if (data5 != null) {
+                                data.moveToNext();
+                                if (data6 != null) {
+                                    data.moveToNext();
+                                    if (data7 != null) {
+                                        data.moveToNext();
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+
+
+
 	public void vinsertDB(){
 		sdb=this.getWritableDatabase();
 		ContentValues cv=new ContentValues();
