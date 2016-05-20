@@ -128,65 +128,17 @@ public class Main_courseDB extends SQLiteOpenHelper {
 
 	}
 
-    public int cheak() {
+    public int cheak()
+    {
         String sql = "select * from vmain_course";
         Cursor data = sdb.rawQuery(sql, null);
 
-        String sql1 = "select * from desserts";
-        Cursor data1 = sdb.rawQuery(sql1, null);
-
-        String sql2 = "select * from nonveg_main_course";
-        Cursor data2 = sdb.rawQuery(sql2, null);
-
-        String sql3 = "select * from Veg_Starter";
-        Cursor data3 = sdb.rawQuery(sql3, null);
-
-        String sql4 = "select * from NonVeg_Starter";
-        Cursor data4 = sdb.rawQuery(sql4, null);
-
-        String sql5 = "select * from Other";
-        Cursor data5 = sdb.rawQuery(sql5, null);
-
-        String sql6 = "select * from Admin";
-        Cursor data6 = sdb.rawQuery(sql6, null);
-
-        String sql7 = "select * from main_category";
-        Cursor data7 = sdb.rawQuery(sql7, null);
-
         data.moveToFirst();
-        data1.moveToFirst();
-        data2.moveToFirst();
-        data3.moveToFirst();
-        data5.moveToFirst();
-        data6.moveToFirst();
-        data7.moveToFirst();
-
-        if (data != null)
+        if (data.getCount() != 0)
         {
             data.moveToNext();
 
-            if (data1 != null) {
-                data.moveToNext();
-                if (data2 != null) {
-                    data.moveToNext();
-                    if (data3 != null) {
-                        data.moveToNext();
-                        if (data4 != null) {
-                            data.moveToNext();
-                            if (data5 != null) {
-                                data.moveToNext();
-                                if (data6 != null) {
-                                    data.moveToNext();
-                                    if (data7 != null) {
-                                        data.moveToNext();
-                                    }
 
-                                }
-                            }
-                        }
-                    }
-                }
-            }
             return 0;
         }
         else
