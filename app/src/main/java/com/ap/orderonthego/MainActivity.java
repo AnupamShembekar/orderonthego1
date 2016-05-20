@@ -36,8 +36,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         dtc= new Main_courseDB(this);
 
         int h = dtc.cheak();
-        if(h==1)
+        if(h==0)
         {
+            Log.d("database operations", "Data exits");
+        }
+        else
+        {
+
             dtc.sinsertDB();
             dtc.dinsertDB();
             dtc.ninsertDB();
@@ -45,10 +50,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             dtc.vinsertDB();
             dtc.AadminDB();
             dtc.tinsert();
-        }
-        else
-        {
-            Log.d("database operations", "Data exits");
         }
 
 
