@@ -20,6 +20,7 @@ import java.util.List;
  */
 public class Add_Item extends Activity implements AdapterView.OnItemSelectedListener,View.OnClickListener {
     Main_courseDB mdb;
+    String[] pro;
 
     Spinner categories,quantity;
     int quant;
@@ -32,18 +33,23 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
     private int i, count=0;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adminadditem);
         mdb=new Main_courseDB(this);
 
+
+        pro = mdb.showcategories();
+
         //linearlayout id for dynamic edittexts and buttons
         l1=(LinearLayout)findViewById(R.id.edlayout);
         l2=(LinearLayout)findViewById(R.id.ilayout);
 
         //Spinner for categories
-        ArrayAdapter<String> item1=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,new String[]{"Starters","Main_Course","Desserts","others"});
+        ArrayAdapter<String> item1=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,pro);
         item1.setDropDownViewResource(android.R.layout.simple_spinner_item);
         categories=(Spinner)findViewById(R.id.spinner1);
         categories.setAdapter(item1);
@@ -77,7 +83,7 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
     @Override
     public void onClick(View v)throws ArrayIndexOutOfBoundsException {
 
-        Toast.makeText(this, quant, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, quant, Toast.LENGTH_SHORT).show();
 
 
         switch (v.getId()) {

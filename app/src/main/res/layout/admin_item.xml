@@ -56,6 +56,15 @@
             android:text="Edit Price"
             android:gravity="center"
             android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="150sp"
+            android:layout_height="55sp"
+            android:id="@+id/edititem4"
+            android:layout_marginTop="50sp"
+            android:text="New Category"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
 
 </LinearLayout>

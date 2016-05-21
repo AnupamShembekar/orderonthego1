@@ -12,7 +12,7 @@ import android.widget.Toast;
  */
 public class AdminMain extends Activity implements View.OnClickListener{
 
-    Button btn1, btn2, btn3;
+    Button btn1, btn2, btn3,btn4;
 
 
     @Override
@@ -23,10 +23,12 @@ public class AdminMain extends Activity implements View.OnClickListener{
         btn1=(Button)findViewById(R.id.edititem1);
         btn2=(Button)findViewById(R.id.edititem2);
         btn3=(Button)findViewById(R.id.edititem3);
+        btn4=(Button)findViewById(R.id.edititem4);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
 
 
     }
@@ -56,6 +58,8 @@ public class AdminMain extends Activity implements View.OnClickListener{
                 //Intent in = new Intent(this, Add_Item.class);
                 //startActivity(in);
                 break;
+            case R.id.edititem4:
+                startActivity(new Intent(this,Add_Table.class));
         }
     }
 }
