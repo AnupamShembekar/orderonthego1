@@ -395,14 +395,15 @@ public class Main_courseDB extends SQLiteOpenHelper {
     }
     public String[] showcategories()
     {
+       // sdb=this.getReadableDatabase();
         Cursor c;
         int i=0;
 
-        c= sdb.rawQuery("select Menu_Cat from main_category",null);
+        c= sdb.rawQuery("select * from main_category",null);
         c.moveToFirst();
         do{
-            p[i] = c.getString(c.getColumnIndex("Menu_Cat"));
-           // c.moveToNext();
+            p[i] = c.getString(1);
+          //  c.moveToNext();
             i++;
         }
          while (c.moveToNext());
@@ -443,6 +444,24 @@ public class Main_courseDB extends SQLiteOpenHelper {
         while (c1.moveToNext());
 
         return q;
+    }
+
+    public void dynamicAdd(String tabname,String col1,String col2){
+            sdb=this.getWritableDatabase();
+        sdb.execSQL("create table if not exists " + tabname + " (sr_no  INTEGER PRIMARY KEY AUTOINCREMENT,"+col1+"  TEXT,"+col2+" INTEGER)");
+        Log.d("database operations", "table created");
+
+    }
+
+    public void xyz(String tablename){
+
+        sdb = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(CAT_TABLE, tablename);
+        sdb.insert(CAT_TABLE_NAME, null, cv);
+        Log.d("tinsertion", "done");
+
     }
 
 }

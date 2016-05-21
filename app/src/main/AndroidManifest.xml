@@ -28,6 +28,7 @@
         <activity android:name=".Add_Item" />
         <activity android:name=".AdminMain" />
         <activity android:name=".Delete" />
+        <activity android:name=".Add_Table"/>
     </application>
 
 </manifest>

@@ -61,6 +61,13 @@
             android:text="@string/SubmitButtonadditem"
             android:layout_gravity="center"
             />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:visibility="visible"
+            >
         <LinearLayout
             android:id="@+id/edlayout"
             android:layout_width="match_parent"
@@ -68,7 +75,10 @@
             android:orientation="horizontal"
             >
 
+
         </LinearLayout>
+        </ScrollView>
+
 
 
 
