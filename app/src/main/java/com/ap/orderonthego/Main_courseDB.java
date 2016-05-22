@@ -8,8 +8,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.util.StringBuilderPrinter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main_courseDB extends SQLiteOpenHelper {
-    String p[]= new String[100];
+    int n;
+
+
 	String q[]=new String[100];
 	public static String DATABASE_NAME="Menu";
 
@@ -395,19 +400,21 @@ public class Main_courseDB extends SQLiteOpenHelper {
     }
     public String[] showcategories()
     {
-       // sdb=this.getReadableDatabase();
+
+        String x;
         Cursor c;
         int i=0;
 
-        c= sdb.rawQuery("select * from main_category",null);
-        c.moveToFirst();
-        do{
-            p[i] = c.getString(1);
-          //  c.moveToNext();
-            i++;
-        }
-         while (c.moveToNext());
+        c= sdb.rawQuery("select Menu_Cat from main_category",null);
+        String p[]= new String[c.getCount()];
 
+         while (c.moveToNext()){
+
+         x=c.getString(c.getColumnIndex("Menu_Cat"));
+             p[i]=x;
+
+       i++;
+    }
         return p;
     }
 
@@ -462,6 +469,9 @@ public class Main_courseDB extends SQLiteOpenHelper {
         sdb.insert(CAT_TABLE_NAME, null, cv);
         Log.d("tinsertion", "done");
 
+
     }
+
+
 
 }

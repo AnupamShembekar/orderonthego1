@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by Akshay on 30-Apr-16.
  */
-public class Add_Item extends Activity implements AdapterView.OnItemSelectedListener,View.OnClickListener {
+public class Add_Item extends Activity implements View.OnClickListener {
     Main_courseDB mdb;
     String[] pro;
 
@@ -31,9 +31,6 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
     LinearLayout l1,l2;
     LinearLayout.LayoutParams mParams=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
     private int i, count=0;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,39 +50,45 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
         item1.setDropDownViewResource(android.R.layout.simple_spinner_item);
         categories=(Spinner)findViewById(R.id.spinner1);
         categories.setAdapter(item1);
-        categories.setOnItemSelectedListener(this);
+        categories.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                cat=categories.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
 
         //spinner for number of items to be added
         ArrayAdapter<Integer> item2=new ArrayAdapter<Integer>(this,android.R.layout.simple_spinner_item,new Integer[]{1,2,3,4});
         item2.setDropDownViewResource(android.R.layout.simple_spinner_item);
         quantity=(Spinner)findViewById(R.id.spinner2);
         quantity.setAdapter(item2);
-        quantity.setOnItemSelectedListener(this);
+        quantity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                quant=(int)quantity.getItemAtPosition(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         submit=(Button)findViewById(R.id.btnSubmit);
         submit.setOnClickListener(this);
-          //  l.setOnClickListener(this);
-
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-         cat=categories.getItemAtPosition(position).toString();
-         quant=(int)quantity.getItemAtPosition(position);
 
-    }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
-    @Override
-    public void onClick(View v)throws ArrayIndexOutOfBoundsException {
-
-        //Toast.makeText(this, quant, Toast.LENGTH_SHORT).show();
-
-
+    public void onClick(View v)throws ArrayIndexOutOfBoundsException
+    {
         switch (v.getId()) {
             case R.id.btnSubmit:
                 if (count > 0) {
@@ -171,8 +174,6 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
     public void createED()
     {
         List<EditText> edit=new ArrayList<>();
-
-
             items=new EditText(this);
             price=new EditText(this);
             edit.add(items);
@@ -183,15 +184,9 @@ public class Add_Item extends Activity implements AdapterView.OnItemSelectedList
             price.setHint("price");
             price.setId(200+i);
 
-
-          //  LinearLayout li=new LinearLayout(this);
             l2.setLayoutParams(mParams);
             l2.addView(items);
             l2.addView(price);
-
-          //  l1.setLayoutParams(mParams);
-           // this.setContentView(l2, mParams);
-
     }
 
 }
