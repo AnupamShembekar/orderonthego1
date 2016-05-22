@@ -30,27 +30,19 @@ public class Delete extends Activity implements View.OnClickListener,AdapterView
 
         b1 = (Button) findViewById(R.id.btnSubmit);
 
-        s2 = (Spinner) findViewById(R.id.spinner12);
+        s1 = (Spinner) findViewById(R.id.spinner11);
         b1.setOnClickListener(this);
 
         db= new Main_courseDB(this);
 
         pro = db.showcategories();
-      /*  for(int j=0;j<100;j++)
-        {
-            arr[j]=pro[j];
-        }*/
+
 
         ArrayAdapter<String> item1=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, pro);
         item1.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        s1 = (Spinner) findViewById(R.id.spinner11);
+
         s1.setAdapter(item1);
         s1.setOnItemSelectedListener(this);
-
-
-
-
-
     }
     @Override
     public void onClick(View v) {

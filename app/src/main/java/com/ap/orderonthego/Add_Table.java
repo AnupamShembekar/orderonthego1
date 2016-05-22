@@ -34,7 +34,6 @@ public class Add_Table extends Activity implements View.OnClickListener{
 
     }
 
-
     @Override
     public void onClick(View v) {
         mb.dynamicAdd(et1.getText().toString(),et2.getText().toString(),et3.getText().toString());
